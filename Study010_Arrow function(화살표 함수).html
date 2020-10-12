@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function sum(x, y) {
+        return x + y;
+        // 일반적으로 함수를 정의하는 것
+      }
+
+      let sumArrowFunction = (x, y) => x + y;
+      // Arrow function. 더 간단하게 정의할 수 있음
+      // 위 함수의 정의와 Arrow function의 정의는 같음
+      // 함수 = (인자 값) => return 값
+
+      // sumArrowFunction (중간에 대문자 = 카멜(낙타)표기법)
+      // sum_Arrow_Function (중간에 언더바 = 스네이크(뱀)표기법)
+      // 기업별로 통일성이 다름. 기능적인 차이는 음슴
+
+      document.write(sum(10, 20));
+      document.write('<br>');
+      document.write(sumArrowFunction(10, 20));
+
+      // 일반적으로 console.log()를 더 많이 쓴다고 함
+      // document.write() <-- 웹페이지에 띄움
+      // console.log() <-- 개발자도구 console창에 띄움
+      // 아마 실무에서는 우리끼리만 보면 되니께 console에..
+    </script>
+  </body>
+</html>
