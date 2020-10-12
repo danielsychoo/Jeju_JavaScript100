@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button type="button" onclick="test();" name="button">클릭!!</button>
+    <!-- 아래에서 선언한 test함수를 호출하는 것 -->
+
+    <script>
+      // 함수
+      // 한번 선언해놓으면 재사용이 편이하다.
+
+      function circleWidth(r) {
+        let width = r*r*3.14;
+        return width;
+          // function 함수이름(input) {
+          // 기능 <---- [let width = r*r*3.14;]
+          // output <---- return width;
+          // } <---- 이 과정이 함수를 선언하는 과정
+      }
+
+      document.write(circleWidth(10));
+      // 출력하는 부분 (함수와 상관이 없음)
+
+      function test() {
+        document.write("hello world!!");
+        // return을 쓰지 않으면 defualt는 undefined
+      }
+
+    </script>
+  </body>
+</html>
