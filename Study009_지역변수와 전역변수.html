@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //지역변수(일정범위 안에서만 작용하는 변수)
+      //전역변수(모든범위에서 작용하는 변수)
+
+      var z = 100;   //z는 전역변수
+
+      function sum(x) {   //x는 매개변수(parameter)이면서 지역변수(local val)
+        let y = 50;    //y는 지역변수로 함수 안에서 정의되었으므로 함수 안(지역)에서만 작용함
+        z = z + y;
+        return x + y;
+      }
+
+      document.write(sum(10));    //10은 전달인자(argument)
+      document.write('<br>');
+      document.write(z);    //여기서의 z는 지역변수 y(50)와 전역변수 z(100)의 합인 150임
+    </script>
+  </body>
+</html>
