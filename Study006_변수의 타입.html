@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // document.write(10+10);
+      // 숫자의 합은 위와 같음. 따라서 20
+      // document.write('10'+'10');
+      // ''를 붙이면 문자가 되기에 문자만 이어짐. 따라서 1010
+
+      document.write(`typeof(5) : ${typeof(5)} <br>`);
+      document.write(`typeof(5.5) : ${typeof(5.5)} <br>`);
+      document.write(`typeof('5') : ${typeof('5')} <br>`);
+      document.write(`typeof('Sungyeop') : ${typeof('Sungyeop')} <br>`);
+      document.write(`typeof(x) : ${typeof(x)} <br>`);
+      document.write(`typeof(undefined) : ${typeof(undefined)} <br>`);
+      document.write(`typeof([1, 2, 3, 4]) : ${typeof([1, 2, 3, 4])} <br>`);
+      document.write(`typeof({'one':'하나', 'two':'둘'}) : ${typeof({'one':'하나', 'two':'둘'})} <br><br>`);
+
+      function js(){
+        return 0;
+      }
+      document.write(`typeof(js) : ${typeof(js)} <br>`);
+      document.write(`typeof(js / 2) : ${typeof(js / 2)} <br>`);
+      document.write(`typeof('js' / 2) : ${typeof('js' / 2)} <br>`);
+      document.write(`'js' / 2 : ${'js' / 2} <br><br>`);
+
+      document.write(`'1' + 1 : ${'1' + 1} <br>`);
+      document.write(`'1' + 1 : ${typeof('1' + 1)} <br><br>`);
+      // 위는 '문자열' + 숫자를 나타낸 것 = String
+      // JavaScript가 아닌 다른 언어는 '문자열' + 숫자 = error
+
+      document.write(`typeof('Sungyeop' / 3) : ${typeof('Sungyeop' / 3)} <br>`);
+      document.write(`'Sungyeop' / 3 : ${'Sungyeop' / 3} <br><br>`);
+      // 위는 '문자열' / 숫자를 나타낸 것 = number
+      // 결과는 NaN(Not a Number)이 뜸.
+      // number 일반적인 수 외에도 infinity, minus infinity, NaN이 포함
+
+      document.write(`typeof(true) : ${typeof(true)} <br>`);
+      // boolean자료형은 참과 거짓을 나타내는 논리자료형
+
+      let test = null;
+      document.write(typeof(test), '<br>');
+      // null은 '아무것도 없는 값' <-> '0'은 0이라는 값이 있는 것
+      // 아무것도 없는 null이 object로 표시되는 것은 JS의 오류임
+      // But 호환성 문제에서 이 오류를 유지하는 것임
+    </script>
+  </body>
+</html>
