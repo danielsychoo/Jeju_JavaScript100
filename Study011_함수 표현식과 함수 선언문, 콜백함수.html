@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+      document.write(sum(10, 20));
+      // 함수 선언문으로 선언한 것은 어디든(선언 전 혹은 후) 출력이 가능
+
+      // 함수 선언문
+      function sum(x, y){
+        return x + y;
+      }
+
+      // 함수 표현식
+      let sumXY = function(x, y){
+        return x + y;
+      }
+
+      document.write(sumXY(10, 20));
+      // 함수 표현식을 이용한 경우에는 표현식의 후에서만 출력이 가능
+
+      let sumXYcopy = sumXY;
+      document.write(sumXYcopy(10, 20));
+      // 함수를 복사하는 경우도 가능
+
+      // 콜백함수 (왜안뜨지.. 우선 다음강의로)
+      function sum(x, y, c) {
+        c(x + y);
+        return x + y;
+      }
+
+      function documentWrite(s){
+        document.write('콜백함수', s);
+      }
+
+      sum(10, 20, documentWrite)
+    </script>
+  </body>
+</html>
