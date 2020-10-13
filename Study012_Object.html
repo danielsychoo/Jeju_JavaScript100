@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function sum(x, y) {
+        return x + y;
+      }
+
+      //object
+
+      let person = {
+        // key : value
+        name : '추성엽',
+        age: 10,
+        height : 30,
+        weight : 40,
+        이력 : {'첫번째직장' : '하나', '두번째직장' : '둘'},
+        기능 : sum
+      }
+      person.소속 = '바울랩';
+      // 속성 추가 가능
+
+      document.write(`제 이름은 ${person.name} 입니다. <br>`)
+      document.write(`제 나이는 ${person.age} 입니다. <br>`)
+      document.write(`제 키는 ${person.height} 입니다. <br>`)
+      document.write(`제 몸무게는 ${person.weight} 입니다. <br><br>`)
+
+      document.write(`제 이름은 ${person['name']} 입니다. <br>`)
+      document.write(`제 나이는 ${person['age']} 입니다. <br>`)
+      document.write(`제 키는 ${person['height']} 입니다. <br>`)
+      document.write(`제 몸무게는 ${person['weight']} 입니다. <br><br>`)
+
+      document.write(`제 소속은 ${person.소속} 입니다.`)
+      document.write(`제 이력은 ${person['이력']['첫번째직장']} 입니다.`)
+      document.write(`제 기능은 ${person['기능'](10,20)} 입니다.`)
+
+      // 추가된 속성 출력 가능
+
+    </script>
+  </body>
+</html>
